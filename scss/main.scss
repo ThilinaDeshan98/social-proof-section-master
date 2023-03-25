@@ -1,0 +1,211 @@
+@import 'resets';
+@import 'variables';
+
+body {
+    display: grid;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    font-family: 'League Spartan', sans-serif;
+}
+
+main {
+    width: 22rem;
+    min-height: 100vh;
+    display: grid;
+    background-color: rgb(255, 255, 255);
+}
+
+.details {
+    h1 {
+        color: $h1-color;
+        font-size: 1.5rem;
+        text-align: center;
+        padding-top: 2rem;
+        width: 50%;
+        margin: 0 auto 1rem auto;
+    }
+
+    &_paragraph {
+        color: $main-paragraph-color;
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.4em;
+        text-align: center;
+        width: 86%;
+        margin: 0 auto 1rem auto;
+    }
+}
+
+.ratings {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+
+    .rating {
+        background-color: $star-box-color;
+        padding: 1.3rem;
+        text-align: center;
+        width: 92%;
+        margin: 0 auto .7rem auto;
+        border-radius: 10px;
+
+        svg {
+            margin-right: .2rem;
+            position: relative;
+            top: -.4rem;
+        }
+
+        &_paragraph {
+            color: $h1-color;
+            font-weight: 700;
+            position: relative;
+            top: .45rem;
+        }
+    }
+}
+
+.cards {
+    margin-bottom: 3.5rem;
+
+    .card {
+        background-color: $h1-color;
+        padding: 1.3rem;
+        width: 92%;
+        height: 30vh;
+        margin: 0 auto .8rem auto;
+        border-radius: 5px;
+
+        h2 {
+            font-size: 1rem;
+            color: white;
+            font-weight: 700;
+        }
+
+        p span {
+            color: $buyer-color;
+        }
+
+        &_header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            position: relative;
+            top: .6rem;
+
+            img {
+                border-radius: 50%;
+            }
+        }
+
+        p q {
+            position: relative;
+            top: 2rem;
+            line-height: 1.1em;
+            color: white;
+        }
+    }
+
+
+}
+
+@include media-large {
+    body {
+        background-color: white;
+        display: block;
+    }
+
+    main {
+        background-color: rgb(255, 255, 255);
+        width: 90%;
+        margin: 0 auto;
+
+        .section_head {
+            display: flex;
+            // justify-content: space-between;
+            align-items: center;
+            margin-top: 3rem;
+        }
+    }
+
+    .details {
+
+        h1 {
+            font-size: 3.2rem;
+            text-align: left;
+            width: 40%;
+            position: relative;
+            right: 15rem;
+        }
+
+        &_paragraph {
+            text-align: left;
+            width: 47%;
+            position: relative;
+            right: 13rem;
+            top: .5rem;
+            font-size: 1.1rem;
+        }
+    }
+
+    .ratings {
+        .rating {
+            padding: 1rem;
+            width: 28rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: .8rem;
+
+            svg {
+                position: relative;
+                top: auto;
+                right: 2.5rem;
+            }
+
+            &_paragraph {
+                position: relative;
+                top: auto;
+            }
+            
+        }
+
+        .top {
+            position: relative;
+            right: 9.2rem;
+        }
+
+        .middle {
+            position: relative;
+            right: 6.2rem;
+        }
+
+        .bottom {
+            position: relative;
+            right: 3.2rem;
+        }
+    }
+
+    .cards {
+        display: flex;
+        margin-top: 2rem;
+        .card {
+            width: 30%;
+            height: 35vh;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .second {
+            position: relative;
+            top: 1.5rem;
+        }
+
+        .third {
+            position: relative;
+            top: 3rem;
+        }
+    }
+
+    
+
+
+}
